@@ -1,0 +1,12 @@
+package com.casemanager.newbusiness;
+
+import com.casemanager.newbusiness.manulifeObject;
+
+ruleflow-group "computepriority"
+rule "1"
+when
+$manulifeObject:manulifeObject(manulifeObject.sourceOfBusiness=="DIR"&&manulifeObject.basicSumAssured>=10)
+then
+$manulifeObject.setPriority(5);
+System.out.println("inside drl");
+end;
